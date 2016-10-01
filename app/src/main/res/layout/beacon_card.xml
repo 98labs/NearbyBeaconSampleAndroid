@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    android:focusable="false"
+    android:focusableInTouchMode="false">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/beacon_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="4dp"
+        app:cardPreventCornerOverlap="false"
+        android:clickable="true"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:minHeight="56dp"
+            android:background="?android:selectableItemBackground">
+
+            <TextView
+                android:id="@+id/advertised_type_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="Advertised Type" />
+
+            <TextView
+                android:id="@+id/advertised_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/advertised_type_label"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/advertised_id_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/advertised_type"
+                android:textSize="14sp"
+                android:text="Advertised Id"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/advertised_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/advertised_id_label"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <pl.bclogic.pulsator4droid.library.PulsatorLayout
+                android:id="@+id/signalPulse"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_below="@id/advertised_id"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                app:pulse_duration="12000"
+                app:pulse_repeat="0"
+                app:pulse_color="@color/colorAccent"
+                app:pulse_startFromScratch="false"
+                app:pulse_interpolator="Linear">
+            </pl.bclogic.pulsator4droid.library.PulsatorLayout>
+
+            <TextView
+                android:id="@+id/distance_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/advertised_id"
+                android:layout_toRightOf="@id/signalPulse"
+                android:textSize="14sp"
+                android:text="Distance"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/distance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/distance_label"
+                android:layout_toRightOf="@id/signalPulse"
+                android:textStyle="bold"
+                android:textSize="34sp" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

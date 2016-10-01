@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">NearbyBeaconSampleAndroid</string>
+    <string name="title_activity_main">Beacons Near Me</string>
+</resources>
